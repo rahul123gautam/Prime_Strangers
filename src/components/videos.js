@@ -233,6 +233,9 @@ const H = styled.h2`
     color:#333;
     margin: 0 0 20px 20px;
     font-weight:500;
+    @media (max-width: 480px){
+        font-size: 16px;
+    }
 `
 
 const Wrap = styled.div`
@@ -256,6 +259,12 @@ const Wrap = styled.div`
         rgb(0 0 0 / 72%) 0px 30px 22px -10px;
         transform: scale(1.1);
         border-color: rgba(249, 249, 249, 0.0);
+    }
+
+    @media (max-width: 480px){
+        &:hover{
+            transform: scale(1);
+        }
     }
 `
 

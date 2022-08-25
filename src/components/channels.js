@@ -23,6 +23,9 @@ export default function Channels(){
                 <img src="./image/slider-2.jpg" alt="h" onClick={Extra}></img>
             </Wrap>
             <Wrap>
+                <img src="./image/s-slider-1.jpg" alt="h" onClick={Extra}></img>
+            </Wrap>
+            <Wrap>
                 <img src="./image/slider-3.png" alt="h" onClick={Singh}></img>
             </Wrap>
             <Wrap>
@@ -44,13 +47,20 @@ const H = styled.h2`
     margin-left: 20px;
     text-decoration: none;
     font-weight:500;
+    @media (max-width: 480px){
+        font-size: 16px;
+    }
 `
 const Container = styled.div`
     display: grid;
     margin:0 20px;
     padding: 30px 0px 26px;
     grid-gap: 25px;
-    grid-template-columns: repeat(5, minmax(0, 250px)); 
+    grid-template-columns: repeat(6, minmax(0, 250px)); 
+
+    @media (max-width: 800px){
+        grid-template-columns: repeat(3, minmax(0, 250px));
+    }
 `
 
 const Wrap = styled.div`
@@ -74,6 +84,11 @@ const Wrap = styled.div`
         rgb(0 0 0 / 72%) 0px 30px 22px -10px;
         transform: scale(1.2);
         border-color: rgba(249, 249, 249, 0.0);
+    }
+    @media (max-width: 480px){
+        &:hover{
+            transform: scale(1);
+        }
     }
 
 `

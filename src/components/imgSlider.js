@@ -37,7 +37,7 @@ export default ImgSlider
 
 const Carousel = styled(Slider)`
     margin: 0 25px;
-    //margin-top: 20px;
+    margin-top: 10px;
 
     .slick-slide {
         padding: 0 px;

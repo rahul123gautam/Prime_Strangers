@@ -12,12 +12,6 @@ const Vlogs = () => {
             <Wrap>
                 <img src="./image/slider-2.jpg" alt="h"/>
             </Wrap>
-            <Wrap>
-                <img src="./image/slider-3.png" alt="h"/>
-            </Wrap>
-            <Wrap>
-                <img src="./image/slider-3.png" alt="h"/>
-            </Wrap>
         </Container>
     </div>
   )
@@ -31,13 +25,22 @@ const Container = styled.div`
     padding: 30px 0px 26px;
     grid-gap: 25px;
     justify-content:center;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 300px));
+    @media (max-width: 480px){
+        &{
+            grid-template-columns: repeat(1, minmax(0, 250px));
+        }
+    }
+
 `
 const H = styled.h2`
     margin:0 0 0 20px;
     color:#333;
     text-decoration: none;
     font-weight:500;
+    @media (max-width: 480px){
+        font-size: 16px;
+    }
 `
 
 const Wrap = styled.div`
@@ -52,14 +55,19 @@ const Wrap = styled.div`
     img{
         border-radius: 10px;
         width: 100%;
-        height: 100%;
+        height: 200px;
         object-fit: cover;
     }
 
     &:hover{
         box-shadow: rgb(0 0 0 / 80%) 0px 40px 50px -16px,
         rgb(0 0 0 / 72%) 0px 30px 22px -10px;
-        transform: scale(1.2);
+        transform: scale(1.1);
         border-color: rgba(249, 249, 249, 0.0);
+    }
+    @media (max-width: 480px){
+        &:hover{
+            transform: scale(1);
+        }
     }
 `
